@@ -1,0 +1,44 @@
+POST http://localhost:3003/api/blogs
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2UiLCJpZCI6IjYyODIxYzJmMTJkZGEzODI2YjI1MDgzZCIsImlhdCI6MTY1Mjc3NDkwNiwiZXhwIjoxNjUyNzc4NTA2fQ.xsPIdhMg_tcw-MQwm2k5V-ncRQdgU7mYIu9Z3VEdtN8
+
+{
+  "title": "New New Post",
+  "author": "new mike",
+  "url": "http://localhost",
+  "likes": 1001
+}
+
+###
+
+# no likes
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "title": "no likes",
+  "author": "Anna",
+  "url": "http://localhost"
+}
+
+###
+
+# no title
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "author": "Anna",
+  "url": "http://localhost"
+}
+
+###
+
+# no url
+POST http://localhost:3003/api/blogs
+content-type: application/json
+
+{
+  "title": "no url",
+  "author": "Anna"
+}

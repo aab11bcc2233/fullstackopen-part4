@@ -1,0 +1,21 @@
+POST http://localhost:3003/api/users
+content-type: application/json
+
+{
+  "username": "mike",
+  "name": "mike",
+  "password": "mike1234"
+}
+
+
+### 
+
+# invalidate username
+POST http://localhost:3003/api/users
+content-type: application/json
+
+{
+  "username": "ms",
+  "name": "mike",
+  "password": "mike1234"
+}
